@@ -29,6 +29,9 @@ $(BUILD_DIR) $(OBJ_DIR):
 clean:
 	rm -rf $(OBJ_DIR) $(BUILD_DIR)
 
+bnr:
+	$(BUILD_DIR)/game && ./build/game
+
 -include $(DEPS)
 
 .PHONY: all clean
