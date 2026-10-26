@@ -1,15 +1,15 @@
-CC			:= gcc
+CC		:= gcc
 COPTIONS 	:= -Wall -Wextra -Iinclude -g
 DEPFLAGS 	:= -MMD -MP
 OBJ_DIR  	:= obj
 LIBS 		:= -lncurses
 
-SRCS	 	:=  src/game.c \
-				src/gameloop.c \
-				src/map.c \
-				src/cursor.c \
-				src/util.c \
-				src/alert.c
+SRCS		:=  src/game.c \
+		src/gameloop.c \
+		src/map.c \
+		src/cursor.c \
+		src/util.c \
+		src/alert.c
 
 OBJS     	:= $(SRCS:src/%.c=$(OBJ_DIR)/%.o)
 DEPS     	:= $(OBJS:.o=.d)
